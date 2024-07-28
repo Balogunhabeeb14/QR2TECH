@@ -36,12 +36,16 @@
     <a href="#home" class="w3-bar-item w3-button w3-wide">
       <img src="Images/QR2TECH ICON BLACK Background Removed.png" alt="Logo" style="height: 30px; margin-right: 10px;;"> QR2TECH
     </a>
+    
     <!-- Right-sided navbar links -->
+    <!-- Sidebar on small screens when clicking the menu icon -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#product" class="w3-bar-item w3-button"><i class="fa fa-cube"></i> PRODUCTS</a> 
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
+  
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -180,7 +184,7 @@
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
-    <span class="w3-xxlarge">4+</span>
+    <span class="w3-xxlarge">3+</span>
     <br>Partners
   </div>
   <div class="w3-quarter">
@@ -188,12 +192,12 @@
     <br>Projects Done
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">9+</span>
+    <span class="w3-xxlarge">5+</span>
     <br>Happy Clients
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">20+</span>
-    <br>Meetings
+    <span class="w3-xxlarge">3+</span>
+    <br>Products
   </div>
 </div>
 
@@ -206,6 +210,61 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
+
+<!-- Products Section -->
+<div class="w3-container w3-padding-64" id="products">
+  <h3 class="w3-center">OUR PRODUCTS</h3>
+  <p class="w3-center w3-large">Explore our innovative solutions</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <!-- Rem Farm -->
+      <div class="w3-quarter">
+        <p class="w3-large">Rem Farm</p>
+        <p id="rem-farm-short" class="w3-justify">A marketplace...</p>
+        <p id="rem-farm-full" class="w3-justify" style="display:none;"> A farming as a service infrastructure, where contemporary technology meets farming</p>
+        <a href="javascript:void(0)" onclick="toggleDescription('rem-farm')">Read more</a>
+    </div>
+      <!-- Product 2 -->
+      <div class="w3-quarter">
+          <p class="w3-large"> Better life </p>
+          <p id="product2-short">An innovative solution...</p>
+          <p id="product2-full" style="display:none;">An innovative solution designed to streamline business processes, enhance productivity, and drive growth through cutting-edge technology and expert insights.</p>
+          <a href="javascript:void(0)" onclick="toggleDescription('product2')">Read more</a>
+      </div>
+      <!-- Product 3 -->
+      <div class="w3-quarter">
+          <p class="w3-large"> Gidi Up</p>
+          <p id="product3-short">provides comprehensive...</p>
+          <p id="product3-full" style="display:none;">provides comprehensive services for managing and optimizing your IT infrastructure, ensuring seamless operations, and maximizing your technology investments.</p>
+          <a href="javascript:void(0)" onclick="toggleDescription('product3')">Read more</a>
+      </div>
+      <!-- Product 4 -->
+      <div class="w3-quarter">
+          <p class="w3-large"> Xplorer </p>
+          <p id="product4-short">Offers unparalleled...</p>
+          <p id="product4-full" style="display:none;">Offers unparalleled solutions for data analytics and business intelligence, empowering you to make data-driven decisions and gain a competitive edge in your industry.</p>
+          <a href="javascript:void(0)" onclick="toggleDescription('product4')">Read more</a>
+      </div>
+  </div>
+</div>
+
+<script>
+function toggleDescription(productId) {
+  var shortDesc = document.getElementById(productId + '-short');
+  var fullDesc = document.getElementById(productId + '-full');
+  var link = event.target;
+
+  if (fullDesc.style.display === "none") {
+      fullDesc.style.display = "inline";
+      shortDesc.style.display = "none";
+      link.innerHTML = "Read less";
+  } else {
+      fullDesc.style.display = "none";
+      shortDesc.style.display = "inline";
+      link.innerHTML = "Read more";
+  }
+}
+</script>
+
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
@@ -226,6 +285,8 @@
     <img src="https://qr2tech.s3.eu-west-2.amazonaws.com/Images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>
 </div>
+
+
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="w3-center w3-black w3-padding-64">
